@@ -39,7 +39,7 @@ test:
 
 about:
   home: http://www.metafor-project.org https://github.com/wviechtb/metafor http://www.wvbauer.com
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: A comprehensive collection of functions for conducting meta-analyses in R. The package includes functions to calculate various effect sizes or outcome
     measures, fit fixed-, random-, and mixed-effects models to such data, carry out moderator and meta-regression analyses, and create various types of meta-analytical
     plots (e.g., forest, funnel, radial, L'Abbe, Baujat, GOSH plots). For meta-analyses of binomial and person-time data, the package also provides functions that
@@ -48,7 +48,8 @@ about:
     account for non-independent sampling errors and/or true effects (e.g., due to the inclusion of multiple treatment studies, multiple endpoints, or other forms
     of clustering). Network meta-analyses and meta-analyses accounting for known correlation structures (e.g., due to phylogenetic relatedness) can also be conducted.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
