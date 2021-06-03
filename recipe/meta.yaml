@@ -23,14 +23,19 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-matrix
+    - r-mathjaxr
     - r-nlme
+    - r-pbapply
   run:
     - r-base
     - r-matrix
+    - r-mathjaxr
     - r-nlme
+    - r-pbapply
 
 test:
   commands:
