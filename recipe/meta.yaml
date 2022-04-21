@@ -28,12 +28,14 @@ requirements:
     - r-base
     - r-matrix
     - r-mathjaxr
+    - r-metadat
     - r-nlme
     - r-pbapply
   run:
     - r-base
     - r-matrix
     - r-mathjaxr
+    - r-metadat
     - r-nlme
     - r-pbapply
 
