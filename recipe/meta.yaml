@@ -1,4 +1,4 @@
-{% set version = "3.0-2" %}
+{% set version = "3.4-0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/metafor_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/metafor/metafor_{{ version }}.tar.gz
-  sha256: 02df435197b225da736103edf73d19253a542bc31fc0b99610c02daec434138a
+  sha256: 92e1bc21c4d135b6e651fbefc4b40666fc02c66a6a4f6f28effee0e73a21c26e
 
 build:
   merge_build_host: true  # [win]
@@ -28,12 +28,14 @@ requirements:
     - r-base
     - r-matrix
     - r-mathjaxr
+    - r-metadat
     - r-nlme
     - r-pbapply
   run:
     - r-base
     - r-matrix
     - r-mathjaxr
+    - r-metadat
     - r-nlme
     - r-pbapply
 
