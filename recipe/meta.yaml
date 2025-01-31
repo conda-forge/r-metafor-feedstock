@@ -1,4 +1,4 @@
-{% set version = "4.6-0" %}
+{% set version = "4.8-0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/metafor_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/metafor/metafor_{{ version }}.tar.gz
-  sha256: 07344cc3bd87b8bd25ef998e9a6ce322ae8e448ef5af06ec3e79631724e18666
+  sha256: 2b710674b15fe3e79474b5c3e779038a614eba9e61b2249532c86dc155f00644
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -25,6 +25,7 @@ requirements:
   host:
     - r-base
     - r-matrix
+    - r-digest
     - r-mathjaxr
     - r-metadat
     - r-nlme
@@ -33,6 +34,7 @@ requirements:
   run:
     - r-base
     - r-matrix
+    - r-digest
     - r-mathjaxr
     - r-metadat
     - r-nlme
